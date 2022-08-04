@@ -4,88 +4,86 @@
             Choose the right plan for you
         </h1>
         <div class="plan-picker">
-            <table class="head">
-                <tr class="row-one">
-                    <td>
+            <div class="head">
+                <!-- <div class="row-one  row"> -->
+                    <div class="rec">
                         <div class="reccurence" @click="switchrecurrence">
                             <div class="left" :class="{active : (rec == 1)}">Monthly</div>
                             <div class="right" :class="{active : (rec == 0)}">Yearly</div>
                         </div>
-                    </td>
-                    <th :class="{active : (plan == 0)}" @click="changePlan(0)">
-                        Mobile
-                    </th>
-                    <th :class="{active : (plan == 1)}" @click="changePlan(1)">
-                        Basic
-                    </th>
-                    <th :class="{active : (plan == 2)}" @click="changePlan(2)">
-                        Standard
-                    </th>
-                    <th :class="{active : (plan == 3)}" @click="changePlan(3)">
-                        Premium
-                    </th>
-                </tr>
-            </table>
-            <table class="data">
-                <tr class="row-two">
-                    <td class="property">Monthly price</td>
-                    <td class="attribute" :class="{active : (plan == 0)}" @click="changePlan(0)">&#8377; {{price1}}</td>
-                    <td class="attribute" :class="{active : (plan == 1)}" @click="changePlan(1)">&#8377; {{price2}}</td>
-                    <td class="attribute" :class="{active : (plan == 2)}" @click="changePlan(2)">&#8377; {{price3}}</td>
-                    <td class="attribute" :class="{active : (plan == 3)}" @click="changePlan(2)">&#8377; {{price4}}</td>
-                </tr>
+                    </div>
+                    <div :class="{active : (plan == 0)}" @click="changePlan(0)" class="heading">
+                        <span>Mobile</span>
+                    </div>
+                    <div :class="{active : (plan == 1)}" @click="changePlan(1)" class="heading">
+                        <span>Basic</span>
+                    </div>
+                    <div :class="{active : (plan == 2)}" @click="changePlan(2)" class="heading">
+                        <span>Standard</span>
+                    </div>
+                    <div :class="{active : (plan == 3)}" @click="changePlan(3)" class="heading">
+                        <span>Premium</span>
+                    </div>
+                <!-- </div> -->
+                <!-- <div class="row-three  row"> -->
+                    <div class="property first">Monthly price</div>
+                    <div class="attribute first" :class="{active : (plan == 0)}" @click="changePlan(0)">&#8377; {{price1}}</div>
+                    <div class="attribute first" :class="{active : (plan == 1)}" @click="changePlan(1)">&#8377; {{price2}}</div>
+                    <div class="attribute first" :class="{active : (plan == 2)}" @click="changePlan(2)">&#8377; {{price3}}</div>
+                    <div class="attribute first" :class="{active : (plan == 3)}" @click="changePlan(2)">&#8377; {{price4}}</div>
+                <!-- </div> -->
 
-                <tr class="row-three">
-                    <td class="property">Video Quality</td>
-                    <td class="attribute" :class="{active : (plan == 0)}" @click="changePlan(0)">Good</td>
-                    <td class="attribute" :class="{active : (plan == 1)}" @click="changePlan(1)">Good</td>
-                    <td class="attribute" :class="{active : (plan == 2)}" @click="changePlan(2)">Better</td>
-                    <td class="attribute" :class="{active : (plan == 3)}" @click="changePlan(3)">Best</td>
-                </tr>
+                <!-- <div class="row-three row"> -->
+                    <div class="property">Video Quality</div>
+                    <div class="attribute" :class="{active : (plan == 0)}" @click="changePlan(0)">Good</div>
+                    <div class="attribute" :class="{active : (plan == 1)}" @click="changePlan(1)">Good</div>
+                    <div class="attribute" :class="{active : (plan == 2)}" @click="changePlan(2)">Better</div>
+                    <div class="attribute" :class="{active : (plan == 3)}" @click="changePlan(3)">Best</div>
+                <!-- </div> -->
 
-                <tr class="row-three">
-                    <td class="property">Resolution</td>
-                    <td class="attribute" :class="{active : (plan == 0)}" @click="changePlan(0)">480p</td>
-                    <td class="attribute" :class="{active : (plan == 1)}" @click="changePlan(1)">480p</td>
-                    <td class="attribute" :class="{active : (plan == 2)}" @click="changePlan(2)">1080p</td>
-                    <td class="attribute" :class="{active : (plan == 3)}" @click="changePlan(3)">4K+HDR</td>
-                </tr>
+                <!-- <div class="row-three row"> -->
+                    <div class="property">Resolution</div>
+                    <div class="attribute" :class="{active : (plan == 0)}" @click="changePlan(0)">480p</div>
+                    <div class="attribute" :class="{active : (plan == 1)}" @click="changePlan(1)">480p</div>
+                    <div class="attribute" :class="{active : (plan == 2)}" @click="changePlan(2)">1080p</div>
+                    <div class="attribute" :class="{active : (plan == 3)}" @click="changePlan(3)">4K+HDR</div>
+                <!-- </div> -->
 
-                <tr class="row-three">
-                    <td class="property">Devices you can use to watch</td>
-                    <td class="attribute" :class="{active : (plan == 0)}" @click="changePlan(0)" >
+                <!-- <div class="row-three row"> -->
+                    <div class="property last">Devices you can use to watch</div>
+                    <div class="attribute last" :class="{active : (plan == 0)}" @click="changePlan(0)" >
                         <ul>
                             <li>Phone</li>
                             <li>Tablet</li>
                         </ul>
-                    </td>
-                    <td class="attribute" :class="{active : (plan == 1)}" @click="changePlan(1)">
+                    </div>
+                    <div class="attribute last" :class="{active : (plan == 1)}" @click="changePlan(1)">
                         <ul>
                             <li>Phone</li>
                             <li>Tablet</li>
                             <li>Computer</li>
                             <li>TV</li>
                         </ul>
-                    </td>
-                    <td class="attribute" :class="{active : (plan == 2)}" @click="changePlan(2)">
+                    </div>
+                    <div class="attribute last" :class="{active : (plan == 2)}" @click="changePlan(2)">
                         <ul>
                             <li>Phone</li>
                             <li>Tablet</li>
                             <li>Computer</li>
                             <li>TV</li>
                         </ul>
-                    </td>
-                    <td class="attribute" :class="{active : (plan == 3)}" @click="changePlan(3)"> 
+                    </div>
+                    <div class="attribute last" :class="{active : (plan == 3)}" @click="changePlan(3)"> 
                         <ul>
                             <li>Phone</li>
                             <li>Tablet</li>
                             <li>Computer</li>
                             <li>TV</li>
                         </ul>
-                    </td>
-                </tr>
+                    </div>
+                <!-- </div> -->
                 
-            </table>
+            </div>
         </div>
         <button @click = "gotocheckout">Next</button>
     </div>
@@ -165,6 +163,10 @@
         align-content: center;
     }
 
+    .plan-picker{
+        margin-top: 50px !important;
+    }
+
     .reccurence{
         display: flex;
         flex-direction: row;
@@ -175,13 +177,23 @@
         color: white;
         font-size: 0.9em;
         font-weight: bold;
-        margin: auto;
+        margin: 0px;
         justify-content: center;
         align-content: center;
     }
 
     h1{
         text-align: center;
+    }
+
+    .head{
+        display: grid;
+        grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
+    }
+
+    .row{
+        display: flex;
+        flex-direction: row;
     }
 
     .reccurence div{
@@ -194,12 +206,11 @@
         border-radius: 50px;
         color: #1f4d91;
         transition: 0.2s;
-
+        
     }
     
     .plan-picker{
-        width: 100vw;
-        margin: 20px auto;
+        margin: auto;
     }
     .plan-picker table{
         margin: auto;
@@ -207,24 +218,30 @@
         
     }
 
-    table {
-        width: 50vw;
-    }
-
-    table th{
+    .heading{
         background-color: #7894bd;
         width: 100px;
         height: 100px;
         position: relative;
         color: white;
         font-weight: normal !important;
+        font-size: 1.2em;
+        font-weight: bold;
+        vertical-align: middle;
+        display: flex;
+        margin: auto;
     }
 
-    table.head th:hover{
+    .heading span{
+        height: fit-content;
+        margin: auto;
+    }
+
+    .heading:hover{
         cursor: pointer;
     }
 
-    table th.active::after{
+    .heading.active::after{
         content: "";
         width: 0px;
         height: 0px;
@@ -236,51 +253,55 @@
         right: 50%;
         transform: translateX(50%);
         font-size: 0.8em;
-        
+
     }
 
-    table th.active{
+    .heading.active{
         background-color: #1f4d91;
         transition: 0.2s;
     }
 
-    table.data{
-        margin-top: 10px;
-        border-collapse: collapse;
-    }
 
-    table.data:hover{
+    .heading:hover{
         cursor: pointer;
     }
 
-    table.data td{
+    .property{
+        font-size: 1em;
+    }
+
+    .property, .attribute{
+        margin-top: 20px;
+        border-bottom: 1px rgb(185, 185, 185) solid;
+        padding-bottom: 20px;
+    }
+
+    .first{
+        margin-top: 50px;
+    }
+
+    .attribute{
         text-align: center;
-        border-top: 1px rgb(141, 141, 141) solid;
-        padding: 20px 0px;
-        vertical-align: top;
     }
 
-    table.data td.property{
-        text-align: left;
-        vertical-align: top;
+    .last{
+        border: none !important;
     }
 
-    table.data tr:nth-child(1) td{
-        border-top: none !important;
-    }
 
-    table.data ul{
+    .attribute ul{
         list-style: none;
         margin: 0px;
+        padding-left: 0px;
     }
-    table.data ul li{
+    .attribute ul li{
        padding: 5px;
        font-size: 0.9em;
-       text-align: left;
+       text-align: center;
        padding-left: 0px;
     }
 
-    td.active{
+    .attribute.active{
         color: #1f4d91;
         font-weight: bold;
         transition: 0.2s ;
@@ -293,6 +314,7 @@
         font-size: 1.2em;
         border: none;
         margin: auto;
+        margin-top: 50px;
         height: 50px;
     }
 
@@ -300,15 +322,21 @@
         cursor: pointer;
     }
 
-    @media (max-width: 1200px) {
-         table th{
+
+    @media (max-width: 800px) {
+        .heading{
             display: none;
         }
+        .rec{
+            grid-column: 1/ span 5 ;
+        }
+        .reccurence{
+            margin: auto;
+        }
+        button{
+            margin: 50px auto;
+        }
     }
-    @media (max-width: 500px) {
-    table {
-        margin: 10px 30px;
-    }
-    }
+    
 
 </style>
